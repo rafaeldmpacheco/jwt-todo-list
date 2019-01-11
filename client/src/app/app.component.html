@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  <nav class="nav nav-pills" style="padding-top: 20px">
+    <a class="nav-link" routerLink="todos" routerLinkActive="active" *ngIf="auth.loggedIn">Trabalhos a fazer</a>
+    <a class="nav-link" routerLink="users" routerLinkActive="active" *ngIf="auth.loggedIn">Usuários cadastrados</a>
+    <!-- <a class="nav-link" routerLink="login" routerLinkActive="active" *ngIf="!auth.loggedIn">Login</a> -->
+    <a class="nav-link" (click)="logout()" href="#" *ngIf="auth.loggedIn">Logout</a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
